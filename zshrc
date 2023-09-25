@@ -1,16 +1,4 @@
 ###################################################################
-# Setup ZSH syntax highlighting
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-###################################################################
-# Setup ZSH autocomplete
-source /opt/homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-
-###################################################################
-# Setup docker
-source $HOME/.docker/init-zsh.sh || true # Added by Docker Desktop
-
-###################################################################
 # Using vi mode
 bindkey -v
 bindkey '^k' reverse-menu-complete

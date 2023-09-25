@@ -5,9 +5,6 @@
 # Important variables:
 export EDITOR='vi'
 export PATH="$PATH:$HOME/.dsda-doom/bin"
-export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/opt/homebrew/Cellar/openssl@1.1/1.1.1t/lib/pkgconfig"
-export libcryptopp_CFLAGS='-I/Users/ritsch_master/Documents/Work/CLibraries/cryptopp870'
-export libcryptopp_LIBS='-L/Users/ritsch_master/Documents/Work/CLibraries/cryptopp870'
 
 ###################################################################
 # Functions
@@ -31,26 +28,6 @@ function ydiff_ez() {
 	diff -u "$1" "$2" | ydiff -s
 }
 
-function pb_strlen() {
-	pb_content=$(pbpaste)
-	pb_length=${#pb_content}
-	echo $pb_length | pbcopy
-}
-
-function jpg_to_bp_base64() {
-	if [ $# -ne 1 ]; then
-		return 1
-	fi
-
-	cat "$1" | base64  | pbcopy
-}
-
 ###################################################################
 # Aliasses:
 alias python="python3"
-
-alias pb_tidyhtml="pbpaste | tidy -i | pbcopy"
-alias pb_base64_encode="pbpaste | base64 | pbcopy"
-alias pb_base64_decode="pbpaste | base64 -d | pbcopy"
-
-
