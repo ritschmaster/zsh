@@ -1,11 +1,11 @@
 ###################################################################
 # Using vi mode
-bindkey -v
-bindkey '^k' reverse-menu-complete
-bindkey '^j' menu-complete
-bindkey '^p' up-history
-bindkey '^n' down-history
-bindkey '^l' menu-select
+# bindkey -v
+# bindkey '^k' reverse-menu-complete
+# bindkey '^j' menu-complete
+# bindkey '^p' up-history
+# bindkey '^n' down-history
+# bindkey '^l' menu-select
 
 ###################################################################
 # Set theme
