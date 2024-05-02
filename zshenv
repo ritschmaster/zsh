@@ -3,7 +3,7 @@
 
 ###################################################################
 # Important variables:
-export EDITOR='vi'
+#export EDITOR='nano'
 export PATH="$PATH:$HOME/.dsda-doom/bin"
 
 ###################################################################
@@ -31,3 +31,5 @@ function ydiff_ez() {
 ###################################################################
 # Aliasses:
 alias python="python3"
+alias ls="eza -l"
+alias cat="bat"
