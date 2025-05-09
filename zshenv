@@ -4,11 +4,11 @@
 ###################################################################
 # Important variables:
 #export EDITOR='nano'
-export PATH="$PATH:$HOME/.dsda-doom/bin"
+export PATH="$PATH:$HOME/.cargo/bin:$HOME/.dsda-doom/bin"
 
 ###################################################################
 # Functions
-docx2md() {
+z_docx2md() {
 	if [ "$#" -ne 2 ]; then
 		echo 'Wrong number of arguments' >&2
 		echo 'Usage: docx2md <.docx> <.md>' >&2
@@ -24,12 +24,19 @@ docx2md() {
 		 -o "$2"
 }
 
-function ydiff_ez() {
-	diff -u "$1" "$2" | ydiff -s
+function z_subtract_set_x_from_set_y() {
+	if [ "$#" -ne 2 ]; then
+		echo 'Wrong number of arguments' >&2
+		echo 'Usage: z_subtract_set_x_from_set_y <set1.txt> <set2.txt>' >&2
+		return
+	fi
+
+	grep -v -x -f "$1" "$2"
 }
 
 ###################################################################
 # Aliasses:
 alias python="python3"
-alias ls="eza -l"
-alias cat="bat"
+alias ls="ls -lGh"
+alias fc="fc -l 0"
+alias history="history 0"
