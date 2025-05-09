@@ -1,16 +1,11 @@
 ###################################################################
-# Setup ZSH syntax highlighting
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-###################################################################
-# Setup ZSH autocomplete
-source /opt/homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+# General stuff
+source $HOME/.config/zsh/zshrc
 
 ###################################################################
 # Setup docker
 source $HOME/.docker/init-zsh.sh || true # Added by Docker Desktop
 
 ###################################################################
-# General stuff
-source $HOME/.config/zsh/zshrc
-
+# Setup ZSH syntax highlighting
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
